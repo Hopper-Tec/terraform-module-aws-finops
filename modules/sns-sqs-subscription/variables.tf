@@ -20,3 +20,9 @@ variable "raw_message_delivery" {
   type        = bool
   default     = false
 }
+
+variable "endpoint_auto_confirms" {
+  description = "(Optional) Whether the endpoint is capable of auto confirming the subscription. Required for cross-account SNS to SQS subscriptions where the subscribing account cannot call GetSubscriptionAttributes on the topic owner's account."
+  type        = bool
+  default     = false
+}
