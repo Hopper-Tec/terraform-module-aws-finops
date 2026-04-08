@@ -15,13 +15,13 @@ variable "monitor_type" {
 }
 
 variable "monitor_dimension" {
-  description = "(Optional) The dimension to monitor when monitor_type is DIMENSIONAL. Valid values: SERVICE, LINKED_ACCOUNT."
+  description = "(Optional) The dimension to monitor when monitor_type is DIMENSIONAL. Valid values: SERVICE, LINKED_ACCOUNT, COST_CATEGORY, TAG."
   type        = string
   default     = "LINKED_ACCOUNT"
 
   validation {
-    condition     = contains(["SERVICE", "LINKED_ACCOUNT"], var.monitor_dimension)
-    error_message = "Valid values are SERVICE or LINKED_ACCOUNT."
+    condition     = contains(["SERVICE", "LINKED_ACCOUNT", "COST_CATEGORY", "TAG"], var.monitor_dimension)
+    error_message = "Valid values are SERVICE, LINKED_ACCOUNT, COST_CATEGORY, or TAG."
   }
 }
 

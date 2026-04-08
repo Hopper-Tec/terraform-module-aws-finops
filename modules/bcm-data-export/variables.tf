@@ -8,10 +8,10 @@ variable "query_statement" {
   type        = string
 }
 
-variable "table_name" {
-  description = "(Required) The table name for the data query. e.g. COST_AND_USAGE_REPORT."
-  type        = string
-  default     = "COST_AND_USAGE_REPORT"
+variable "table_configurations" {
+  description = "(Optional) Table configuration map. Keys are table names (e.g. COST_AND_USAGE_REPORT), values are maps of configuration options."
+  type        = map(map(string))
+  default     = {}
 }
 
 variable "s3_bucket" {

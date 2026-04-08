@@ -20,8 +20,8 @@ resource "aws_budgets_budget" "this" {
       notification_type          = notification.value.notification_type
       threshold                  = notification.value.threshold
       threshold_type             = notification.value.threshold_type
-      subscriber_sns_topic_arns  = lookup(notification.value, "subscriber_sns_topic_arns", [])
-      subscriber_email_addresses = lookup(notification.value, "subscriber_email_addresses", [])
+      subscriber_sns_topic_arns  = notification.value.subscriber_sns_topic_arns
+      subscriber_email_addresses = notification.value.subscriber_email_addresses
     }
   }
 
