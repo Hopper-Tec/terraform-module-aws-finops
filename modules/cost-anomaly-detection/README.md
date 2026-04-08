@@ -30,7 +30,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_frequency"></a> [frequency](#input\_frequency) | (Required) The frequency that anomaly reports are sent. Valid values: DAILY, IMMEDIATE, WEEKLY. | `string` | `"DAILY"` | no |
-| <a name="input_monitor_dimension"></a> [monitor\_dimension](#input\_monitor\_dimension) | (Optional) The dimension to monitor when monitor\_type is DIMENSIONAL. Valid values: SERVICE, LINKED\_ACCOUNT. | `string` | `"LINKED_ACCOUNT"` | no |
+| <a name="input_monitor_dimension"></a> [monitor\_dimension](#input\_monitor\_dimension) | (Optional) The dimension to monitor when monitor\_type is DIMENSIONAL. Valid values: SERVICE, LINKED\_ACCOUNT, COST\_CATEGORY, TAG. | `string` | `"LINKED_ACCOUNT"` | no |
 | <a name="input_monitor_specification"></a> [monitor\_specification](#input\_monitor\_specification) | (Optional) JSON filter expression for CUSTOM monitor type. | `string` | `null` | no |
 | <a name="input_monitor_type"></a> [monitor\_type](#input\_monitor\_type) | (Required) The type of anomaly monitor. Valid values: DIMENSIONAL, CUSTOM. | `string` | `"DIMENSIONAL"` | no |
 | <a name="input_name"></a> [name](#input\_name) | (Required) Name for the anomaly monitor and subscription. | `string` | n/a | yes |
