@@ -1,20 +1,14 @@
 resource "aws_ce_anomaly_monitor" "this" {
-  name              = var.name
-  monitor_type      = var.monitor_type
-  monitor_dimension = var.monitor_type == "DIMENSIONAL" ? var.monitor_dimension : null
-
-  dynamic "monitor_specification" {
-    for_each = var.monitor_type == "CUSTOM" && var.monitor_specification != null ? [var.monitor_specification] : []
-    content {
-      # Custom JSON filter expression
-    }
-  }
+  name                  = var.name
+  monitor_type          = var.monitor_type
+  monitor_dimension     = var.monitor_type == "DIMENSIONAL" ? var.monitor_dimension : null
+  monitor_specification = var.monitor_type == "CUSTOM" ? var.monitor_specification : null
 
   tags = var.tags
 }
 
 resource "aws_ce_anomaly_subscription" "this" {
-  name             = "${var.name}-subscription"
+  name             = format("%s-subscription", var.name)
   frequency        = var.frequency
   monitor_arn_list = [aws_ce_anomaly_monitor.this.arn]
 

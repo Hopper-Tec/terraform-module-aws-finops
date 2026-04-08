@@ -19,9 +19,9 @@ Reusable Terraform modules to manage AWS cost visibility: anomaly detection, bud
 
 - `.pre-commit-config.yaml` – Shared linting hooks
 - `modules/` – Terraform modules
-  - [Cost Anomaly Detection](./modules/cost-anomaly-detection/README.md)
-  - [Budgets](./modules/budgets/README.md)
-  - [BCM Data Export](./modules/bcm-data-export/README.md)
+  - [Cost Anomaly Detection](https://github.com/Hopper-Tec/terraform-module-aws-finops/tree/main/modules/cost-anomaly-detection)
+  - [Budgets](https://github.com/Hopper-Tec/terraform-module-aws-finops/tree/main/modules/budgets)
+  - [BCM Data Export](https://github.com/Hopper-Tec/terraform-module-aws-finops/tree/main/modules/bcm-data-export)
 
 ---
 

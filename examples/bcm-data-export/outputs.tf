@@ -1,9 +1,9 @@
 output "aws_bcmdataexports_export_arn" {
   description = "The ARN of the BCM data export."
-  value       = aws_bcmdataexports_export.this.export[0].export_arn
+  value       = module.bcm_data_export.aws_bcmdataexports_export_arn
 }
 
 output "aws_bcmdataexports_export_id" {
   description = "The ID of the BCM data export."
-  value       = aws_bcmdataexports_export.this.arn
+  value       = module.bcm_data_export.aws_bcmdataexports_export_id
 }
